@@ -1,0 +1,380 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Farro', sans-serif;
+}
+
+div#container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    background: url(../images/pexels-pixabay-209224.jpg) no-repeat;
+    background-size: cover;
+    mix-blend-mode: normal;
+}
+div#calc-box{
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, auto);
+    margin-top: 80px;
+    margin-bottom: 80px;
+    background: linear-gradient(111.11deg, rgba(255, 255, 255, 0.4) 2.14%, rgba(255, 255, 255, 0.1) 98.14%);
+    box-shadow: inset 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+}
+
+/*start of header section*/
+div#header{
+    grid-column: 1 / 11;
+    grid-row: 1 / 2;
+    margin-top: 43px;
+    text-align: center;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+div#header h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0.175em;
+    color: #052A3F;
+}
+div#header a{
+    color: inherit;
+    text-decoration: none;
+}
+/*end of header section*/
+
+/*start of button section*/
+
+div#button-box{
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+    margin-top: 33px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+}
+
+/*Start of activate icon button*/
+div#location-button{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-flow: row nowrap;
+}
+div#activate-icon{
+    display: block;
+    position: absolute;
+    animation: iconAnimation 2s infinite linear alternate;
+}
+div#activate-icon svg{
+    display: block;
+    width: 14px;
+    height: 16px;
+    filter: drop-shadow(0px 1px 5px rgba(5, 42, 63, 0.54));
+    margin-top: 80px;
+}
+div#activate-icon svg path{
+    fill: #052A3F;
+    filter: drop-shadow(0px 1px 5px rgba(5, 42, 63, 0.54));
+}
+div#non-activate-icon{
+    display: none;
+    /*when clicked display will be block*/
+    position: absolute;
+    animation: iconAnimation 2s infinite linear alternate;
+}
+@keyframes iconAnimation {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
+
+div#non-activate-icon svg{
+    display: block;
+    width: 14px;
+    height: 16px;
+    filter: drop-shadow(0px 1px 5px rgba(5, 42, 63, 0.54));
+    margin-top: 80px;
+}
+div#non-activate-icon svg path{
+    fill: #052A3F;
+    filter: drop-shadow(0px 1px 5px rgba(5, 42, 63, 0.54));
+}
+
+
+
+/*end of activate icon button*/
+
+div#button-default, div#button-outside{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 145px;
+    height: 50px;
+    background: linear-gradient(94.81deg, #A1C4FD 13.07%, #C2E9FB 86.2%);
+    box-shadow: 0px 3px 10px rgba(5, 42, 63, 0.32);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    transition: transform 1s linear;
+    cursor: pointer;
+}
+div#button-default:hover, div#button-outside:hover{
+    transform: scale(0.95);
+}
+
+div#button-outside{
+    margin-left: 28px;
+}
+div#location-button h3{
+    font-family: Farro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+/*end of button section*/
+
+/*Start of inside dhaka section*/
+div#inside-dhaka{
+    grid-column: 2 / 10;
+    grid-row: 3 / 4;
+    margin-top: 47px;
+    margin-bottom: 58px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+}
+div#inside-dhaka form{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+div#default-form{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, auto);
+}
+
+/*start of inside dhaka default section*/
+
+/*this one is for the default label text*/
+label#default-label{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+}
+/*all-label-design is for the default design of all labels  */
+label.all-label-design{
+    display: block;
+    height: 50px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.055em;
+    padding: 16px;
+}
+
+/* for default input designs*/
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    font-family: Farro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    color: #0000009d;
+}
+/* for default input designs*/
+
+/*this one is for the default dress price input*/
+input#default-dress-prices{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+}
+/*input.all-input-design is for the default design of all the number inputs*/
+input.all-input-design{
+    height: 50px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 10px rgba(5, 42, 63, 0.32);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    padding: 16px;
+}
+
+/*this one is for the default dress price submit input*/
+input#default-submit-button{
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+/*input.all-submit-button is for the default design of all the submit input*/
+input.all-submit-button{
+    width: 102px;
+    height: 50px;
+    margin-top: 20px;
+    background: linear-gradient(94.81deg, #A1C4FD 13.07%, #C2E9FB 86.2%);
+    box-shadow: 0px 3px 10px rgba(5, 42, 63, 0.32);
+    border: none;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: 'Farro', sans-serif;
+    letter-spacing: 0.015em;
+    transition: transform 1s linear;
+    cursor: pointer;
+}
+input.all-submit-button:hover{
+    transform: scale(0.95);
+}
+
+/*This one is for the note*/
+div#customer-default-note{
+    grid-column: 1 / 7;
+    grid-row: 4 / 5;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+p.customer-text{
+    padding: 16px;
+    font-family: Farro;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+}
+/*end of inside dhaka default section*/
+
+
+
+/*start of the inside dhaka advance section */
+div#advance-form{
+    grid-column: 1 / 9;
+    grid-row: 2 / 3;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, auto);
+}
+label#advance-label{
+    grid-column: 1 / 9;
+    grid-row: 1 / 2;
+}
+input#advance-dress-prices{
+    grid-column: 1 / 7;
+    grid-row: 2 / 3;
+}
+input#advance-dress-percentage{
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+    margin-top: 20px;
+}
+input#advance-submit-button{
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+div#customer-advance-note{
+    grid-column: 1 / 7;
+    grid-row: 5 / 6;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+/*end of the inside dhaka advance section */
+
+/*end of inside dhaka section*/
+
+
+/* start of mobile site design for heading and footer site */
+@media screen and (max-width: 800px){
+    input#default-dress-prices{
+        grid-column: 1 / 8;
+        grid-row: 2 / 3;
+    }
+    div#customer-default-note{
+        grid-column: 1 / 9;
+    }
+
+    input#advance-dress-prices{
+        grid-column: 1 / 8;
+        grid-row: 2 / 3;
+    }
+    input#advance-dress-percentage{
+        grid-column: 1 / 8;
+        grid-row: 3 / 4;
+    }
+    div#customer-advance-note{
+        grid-column: 1 / 9;
+        grid-row: 5 / 6;
+    }
+}
+@media screen and (max-width: 450px){
+    div#button-box{
+        grid-column: 1 / 11;
+    }
+    div#location-button{
+        justify-content: center;
+    }
+    input.all-submit-button{
+        width: 120px;
+    }
+    div#button-default, div#button-outside{
+        margin: 0px 5px;
+    }
+    input#default-dress-prices{
+        grid-column: 1 / 9;
+        grid-row: 2 / 3;
+    }
+    div#customer-default-note{
+        grid-column: 1 / 9;
+    }
+
+    input#advance-dress-prices{
+        grid-column: 1 / 9;
+        grid-row: 2 / 3;
+    }
+    input#advance-dress-percentage{
+        grid-column: 1 / 9;
+        grid-row: 3 / 4;
+    }
+    div#customer-advance-note{
+        grid-column: 1 / 9;
+        grid-row: 5 / 6;
+    }
+}
+/* end of mobile site design for heading and footer site */
+

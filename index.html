@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FPH Calculator</title>
+        <link href="styles/index.css" type="text/css" rel="stylesheet">
+      <!--<link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap" rel="stylesheet">-->  
+    </head>
+    <body>
+        <div id="container">
+            <div id="calc-box">
+                <!--Start of header-->
+                <div id="header">
+                    <a href="index.html"><h1>FPH Calculator</h1></a>
+                </div>
+                <!--end of header-->
+                
+                <!--Start of button section-->
+                <div id="button-box">
+                <div id="location-button">
+                    <div id="button-default">
+                        <h3 id="inside-dhaka">Inside Dhaka</h3>
+                        <div id="activate-icon">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                        </div>
+                    </div>
+                    <div id="button-outside">
+                        <h3 id="outside-dhaka">Outside Dhaka</h3>
+                        <div id="non-activate-icon">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" class="svg-inline--fa fa-chevron-down fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!--end of button section-->
+
+                <!--start of inside dhaka section-->
+                <div id="inside-dhaka">
+                    <form id="form" action="" method="GET">                                <!--start of default form-->   
+                    <div id="default-form">
+                        <!--start of the default price-->
+                        <label for="default-dress-prices" id="default-label" class="all-label-design">Default :</label>
+                        <input type="number" name="price" min="50" id="default-dress-prices" class="all-input-design" placeholder="Prices of one or more dresses" required>
+                        <!--end of the default price-->
+
+                        <!--start of the default price submit button-->
+                        <input type="submit" name="evaluate" value="Evaluate" id="default-submit-button" class="all-submit-button">
+                        <!--end of the default price submit button-->
+                        <div id="customer-default-note">
+                            <p class="customer-text" id="default-para">Note : Please insert the total prices of all the dresses and enter submit to get the result with customer input text.</p>
+                        </div>
+                    </div>
+                    
+                    <!--end of default form-->
+                    
+                    <!--start of advance form-->
+                    <div id="advance-form">
+                        <!-- start of the advanced price-->
+                        <label for="advance-dress-prices" id="advance-label" class="all-label-design">In time of advance :</label>
+                        <input type="number" name="price" min="50" id="advance-dress-prices" class="all-input-design" placeholder="Prices of one or more dresses" required>
+                        <!-- end of the advanced price-->
+
+                        <!-- start of the advanced percentage-->
+                        <input type="number" name="price" min="1" max="90" id="advance-dress-percentage" class="all-input-design" placeholder="Percentage of the advance payment" required>
+                        <!-- end of the advanced percentage-->
+
+                        <!-- start of the advanced price submit button-->
+                        <input type="submit" name="evaluate" value="Evaluate" id="advance-submit-button" class="all-submit-button">
+                        <!-- end of the advanced price submit button-->
+                        <div id="customer-advance-note">
+                            <p class="customer-text" id="advance-para">Note : Please insert the total prices of all the dresses, also the advance percantage and enter submit to get the result with customer input text.</p>
+                        </div>
+                    </div>
+                    <!--end of advance form-->
+                    </form>
+                </div>
+                <!--end of inside dhaka section-->
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
